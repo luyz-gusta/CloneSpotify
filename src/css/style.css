@@ -26,6 +26,20 @@ ol {
     --white-default: #fff;
     --subtitle: #b3b3b3;
     --bg-black-opacity: #1f1f1f;
+    --text-gray: #b2b2b2;
+}
+
+html {
+    scrollbar-color: hsla(0, 0%, 100%, 0.3) transparent;
+    scrollbar-width: auto;
+}
+
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: hsla(0, 0%, 100%, 0.3);
 }
 
 body {
@@ -70,23 +84,25 @@ nav {
     display: flex;
     flex-direction: column;
     border-radius: 8px;
-    overflow-y: auto;
     grid-column: 2/-1;
     grid-row: 1;
     background-color: var(--bg-box);
 }
 
 header {
-    position: sticky;
     width: 100%;
     height: 80px;
     color: tomato;
 }
 
 main {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
     padding: 2.5rem 1.5rem;
     width: 100%;
     height: 100%;
+    overflow-y: auto;
     background: linear-gradient(180deg, #1f1f1f 0%, #121212 55.5%);
 }
 
@@ -96,10 +112,33 @@ main {
     gap: 12px;
 }
 
+.btnCards {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    /* padding-left: 8px; */
+}
+
+.btnCards span {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--text-gray);
+    cursor: pointer;
+}
+
+.btnCards span:hover {
+    text-decoration: underline;
+}
+
 .tituloCards {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--white-default);
+    cursor: pointer;
+}
+
+.tituloCards:hover {
+    text-decoration: underline;
 }
 
 .boxCards {
@@ -110,8 +149,8 @@ main {
 .card {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    padding: 12px;
+    gap: 10px;
+    padding: 0.75rem;
     border-radius: 6px;
     cursor: pointer;
 }
@@ -120,10 +159,27 @@ main {
     background-color: var(--bg-black-opacity);
 }
 
-.card img {
+.boxImg {
+    overflow: hidden;
+    position: relative;
+    max-height: 198px;
     width: 100%;
     height: auto;
-    border-radius: 100%;
+    border-radius: 50%;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.boxImg img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.img {
+    max-height: 198px;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
 }
 
 .card p {
@@ -147,4 +203,14 @@ main {
     height: 100%;
     width: 100%;
     background: linear-gradient(90deg, #af2896, #509bf5);
+}
+
+.truncated-text {
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
 }
