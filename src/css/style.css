@@ -442,3 +442,69 @@ footer{
     align-items: center;
     gap: 2rem;
 }
+.items{
+    color: rgb(163, 158, 158);
+    font-size: 0.6875rem;
+    font-weight: 600;
+
+}
+
+.items2{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+.cookie{
+    padding: 20px;
+    font-weight: 600;
+    font-size: 0.7975rem;
+}
+
+.botaolingua{
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 15px;
+    border: 1px solid #ccc; 
+    border-radius: 30px; 
+    background-color: transparent;
+    color: white; 
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    gap: 7px;
+    margin-left: 10px;
+    margin-top: 40px;
+    height: 50px;
+    width: 220px;
+    transition: .1s ease-in-out;
+}
+.botaolingua:hover {
+    transform: scale(1.02);
+}
+#boxPropaganda{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+
+}
+
+.textoPropaganda{
+    color: white;
+    font-weight: 600;
+}
+
+.btnAd{
+    background-color: white;
+    color: black;
+    font-weight: 700;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
